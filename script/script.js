@@ -66,8 +66,7 @@ setInterval(()=>{
 
 
 //Timer => .hero-section-timer-grid"> <!--5 grid-->
-// let secondsTable =
-// console.log(secondsTable)
+
 
 //Определение переменных времени
 
@@ -76,9 +75,7 @@ const countTime =()=>{
     const deadline = new Date('2023-05-01')
     const resultDate = Math.abs(Date.parse(deadline)-Date.parse(currentDate));
     const years = Math.floor(resultDate/(1000*60*60*24*30*12));
-    //console.log(years);
     const months = Math.floor(resultDate/(1000*60*60*24*30))%12;
-    console.log(months);
     const days=Math.floor(resultDate/(1000*60*60*24)%30);
     const hours =Math.floor(resultDate/(1000*60*60)%24);
     const minutes = Math.floor(resultDate/(1000*60)%60);
@@ -92,7 +89,6 @@ const countTime =()=>{
 
 }
 
-
 setInterval(countTime, 1000)
 
 function addZero(num){
@@ -104,14 +100,52 @@ function addZero(num){
 }
 countTime();
 
+//Modal
 
-//Корректировка итоговых значений с последующем выводом на рендеринг
+const modalTrigger = document.querySelectorAll('[data-modal]'),
+    modal = document.querySelector('.modal'),
+    modalCloseBtn = document.querySelector('[data-close]');
 
 
-//
-// function updateTime(remainsSecond){
-//
-//     document.querySelector('.timInner__seconds').innerHTML(remainsSecond)
-// }
-//
-// setInterval(updateTime(remainsSecond), 1000)
+// modalTrigger.addEventListener('click', ()=>{
+//    modal.classList.add('show');
+//    modal.classList.remove('hide');
+//    document.body.style.overflow = 'hidden';
+// });
+function openModal(){
+    modal.classList.add('show');
+    modal.classList.remove('hide');
+    document.body.style.overflow = 'hidden';
+    clearInterval(modalTimerId);
+}
+
+modalTrigger.forEach(btn => {
+    btn.addEventListener('click', openModal);
+});
+
+function closeModal(){
+    modal.classList.add('hide');
+    modal.classList.remove('show');
+    document.body.style.overflow = '';
+}
+
+modalCloseBtn.addEventListener('click', closeModal);
+
+modal.addEventListener('click', (e) =>{
+    if(e.target===modal){
+        closeModal();
+    }
+
+    document.addEventListener('keydown', (e)=>{
+        if (e.code == 'Escape' && modal.classList.contains('show')){
+            closeModal();
+        }
+    });
+});
+//Установка работы модального окна (срабатывает через определенное  время);
+const modalTimerId = setTimeout(openModal,200);
+
+
+
+
+

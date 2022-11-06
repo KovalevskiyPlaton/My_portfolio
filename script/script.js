@@ -143,7 +143,7 @@ modal.addEventListener('click', (e) =>{
     });
 });
 //Установка работы модального окна (срабатывает через определенное  время);
-const modalTimerId = setTimeout(openModal,200);
+const modalTimerId = setTimeout(openModal,5000);
 
 
 

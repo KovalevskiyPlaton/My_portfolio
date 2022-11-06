@@ -1,10 +1,22 @@
+/*font*/
+@import url("/fonts/Chiller/stylesheet.css");
 
-
+:root{
+    font-family: 'Chiller LET';
+    font-weight: normal;
+    font-style: normal;
+}
 /*General__grid*/
 body{
     background: #dad5d5;
+    font-family: 'Chiller LET';
+    font-weight: normal;
+    font-style: normal;
 }
+h1{
+    font-family: 'Chiller LET';
 
+}
 .container{
 display:grid;
     height: 100%;
@@ -22,6 +34,21 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     border: 1px solid black;
     grid-area:hero-section-head-panel-grid;
 }
+.nav__panel{
+    width: 100%;
+    height:70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background: url('/images/nav/nav_panel.png');
+    color: white;
+    border-radius: 30px;
+}
+.nav__items{
+    padding:20px 20px 0px 0px;
+    margin-left:20px;
+}
 
 /*2 grid*/
 .hero-section-aboutMe-grid{
@@ -37,12 +64,13 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
 }
 
 .Photo__author{
-    min-width: 354px;
-    min-height: 713px;
-    border-radius: 10%;
+    width: 354px;
+    height: 713px;
 }
+
 .Photo__author> img{
     border-radius: 10%;
+
 }
 
 /*4 grid*/
@@ -124,7 +152,6 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
 
 /*5 grid*/
 .hero-section-timer-grid{
-
     padding:10px;
     border: 1px solid black;
     grid-area: hero-section-timer-grid;
@@ -137,8 +164,8 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     }
 
 .timer__container{
-    width:1500px;
     height:300px;
+    width: 100%;
     border:1px solid black;
     display:flex;
     flex-direction:row;
@@ -152,9 +179,9 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
 .timer__table{
     text-align: center;
     display:flex;
-    width: 80px;
+    width: 120px;
     height: 80px;
-    border:2px solid black;
+    background: url('/images/timer/timer_border.png.png');
     justify-content:center;
     align-content:center;
     align-items:center;
@@ -164,8 +191,9 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
 }
 .timInner{
     font-style:italic;
-    font-size:20px;
+    font-size:30px;
     flex-wrap:wrap;
+    font-weight: bold;
 }
 
 /*6 grid*/
@@ -292,7 +320,7 @@ container__slide{
     top:0;
     left:0;
     z-index:1050;
-    display:flex;
+    display:none;
     width:100%;
     height:100%;
     overflow:hidden;
@@ -335,7 +363,7 @@ container__slide{
 }
 .modal__inner_textblock{
     display:flex;
-    width:160px;
+    max-width:180px;
     height:200px;
     border:none;
     font-size:18px;
@@ -355,6 +383,7 @@ container__slide{
     border-radius: 10%;
     /*align-self: flex-start;*/
     margin-left: 120px;
+    border: 2px solid
 }
 
 .show{

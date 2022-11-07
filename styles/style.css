@@ -1,22 +1,32 @@
 /*font*/
-@import url("/fonts/Chiller/stylesheet.css");
+@font-face {
+    font-family: 'Marck Script';
+    src: url('/fonts/Marck_Script/MarckScript-Regular.ttf')
+}
 
 :root{
-    font-family: 'Chiller LET';
+    font-family: 'Marck Script';
     font-weight: normal;
     font-style: normal;
+    font-size: 25px;
 }
 /*General__grid*/
-body{
-    background: #dad5d5;
-    font-family: 'Chiller LET';
-    font-weight: normal;
-    font-style: normal;
-}
-h1{
-    font-family: 'Chiller LET';
+/*body{*/
+/*    background: #dad5d5;*/
+/*    font-family: 'Chiller';*/
+/*    font-weight: normal;*/
+/*    font-style: normal;*/
+/*}*/
+.nav__items > a {
+    text-decoration:none;
+    color: #ffdac0;
+  }
 
+a:hover{
+    cursor: default;
+    border-bottom: 1px solid #2a2727;
 }
+
 .container{
 display:grid;
     height: 100%;
@@ -42,8 +52,8 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     justify-content: flex-end;
     align-items: center;
     background: url('/images/nav/nav_panel.png');
-    color: white;
-    border-radius: 30px;
+    border-radius: 10px;
+
 }
 .nav__items{
     padding:20px 20px 0px 0px;
@@ -64,8 +74,9 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
 }
 
 .Photo__author{
-    width: 354px;
-    height: 713px;
+    max-width: 566px;
+    max-height: 755px;
+
 }
 
 .Photo__author> img{
@@ -357,40 +368,41 @@ container__slide{
     text-transform:uppercase;
 }
 .total__modal{
-    margin: 35px;
+    margin: 10px;
     display: flex;
     flex-direction: row;
 }
 .modal__inner_textblock{
     display:flex;
-    max-width:180px;
-    height:200px;
+    max-width:240px;
+    max-height:200px;
     border:none;
-    font-size:18px;
+    font-size:20px;
     font-style: italic;
     /*text-align:center;*/
     text-align: start;
+    font-weight: bold;
 
 }
 .modal__inner_image{
     display:flex;
     width:240px;
-    height:370px;
-    background-image:url(/images/modal/img_modal.jpg);
+    height:410px;
+    background-image:url(/images/modal/img_modal.png);
     font-size:18px;
     text-align:center;
     padding:0 20px;
     border-radius: 10%;
     /*align-self: flex-start;*/
-    margin-left: 120px;
-    border: 2px solid
+    margin-left: 80px;
+    border: 3px solid #ffd4b0
 }
 
 .show{
     display:block
 }
-.hide{display:none
-
+.hide{
+    display:none
 }
 
 

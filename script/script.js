@@ -107,11 +107,6 @@ const modalTrigger = document.querySelectorAll('[data-modal]'),
     modalCloseBtn = document.querySelector('[data-close]');
 
 
-// modalTrigger.addEventListener('click', ()=>{
-//    modal.classList.add('show');
-//    modal.classList.remove('hide');
-//    document.body.style.overflow = 'hidden';
-// });
 function openModal(){
     modal.classList.add('show');
     modal.classList.remove('hide');
@@ -143,7 +138,22 @@ modal.addEventListener('click', (e) =>{
     });
 });
 //Установка работы модального окна (срабатывает через определенное  время);
-const modalTimerId = setTimeout(openModal,5000);
+const modalTimerId = setTimeout(openModal,100);
+
+//Установка Light scroll  (мягкая прокрутка)
+const anchors = document.querySelectorAll('a');
+
+anchors.forEach(anchor=>{
+    anchor.addEventListener('click', (event)=>{
+        event.preventDefault();
+        const blockID = anchor.getAttribute('href');
+        document.querySelector(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block:'start'
+        })
+    })
+})
+
 
 
 

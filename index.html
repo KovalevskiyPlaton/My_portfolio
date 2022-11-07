@@ -3,22 +3,32 @@
     <head>
 <!--        <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8" />-->
         <meta name="viewport" content="width=500, initial-scale=1" charset="UTF-8" />
-           <title>About me</title>
+           <title>Portfolio: Kovalevskiy P.V.</title>
        <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
     <main class="container"> <!-- General__grid-->
         <section class="hero-section-head-panel-grid"> <!--1 grid-->
            <div class="nav__panel">
-               <span class="nav__items">Обо мне</span>
-               <span class="nav__items">Мои проэкты(портфолио)</span>
-               <span class="nav__items">Мой стэк</span>
-               <span class="nav__items">Контакты</span>
+               <span class="nav__items">
+                   <a href="#aboutMyself">Обо мне</a>
+               </span>
+               <span class="nav__items">
+                   <a href="#myProjects">Мои проэкты(портфолио)</a>
+               </span>
+               <span class="nav__items">
+                   <a href="#myStack">Мой стэк</a>
+               </span>
+               <span class="nav__items">
+                   <a href="#contacts">Контакты</a>
+               </span>
            </div>
 
         </section>
         <section class="hero-section-aboutMe-grid"> <!--2 grid-->
-            <h1>Place for About mySelf</h1>
+                <header class="sub__menu">
+            <h1 class="aboutMyself" id="aboutMyself">Обо мне</h1>
+                </header>
             <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</span>
         </section>
         <section class="hero-section-myPhoto-grid"> <!--3 grid-->
@@ -28,7 +38,7 @@
             </section>
         <!--4 grid-->
         <section class="hero-section-projects-grid">
-            <h1 class="skills__header">Мои работы (портфолио)</h1>
+            <h1 class="skills__header" id="myProjects">Мои работы (портфолио)</h1>
               <div class="card-flex-container">
                    <div class="flex__box">
                           <a class="card itemFb__1" href="#">
@@ -80,7 +90,7 @@
         </section>
             <section class="hero-section-timer-grid"> <!--5 grid-->
                     <h1 class="skills__header">До ухода в IT осталось:</h1>
-                <div class='timer__container'>
+                <div class='timer__container'id="myStack">
                         <div class="header__table">
                             <span class="timer__header">Лет</span>
                             <div class='timer__table timInner t_years'>00</div>
@@ -108,7 +118,7 @@
                 </div>
             </section>
             <section class="hero-section-skills-grid"> <!--6 grid-->
-                <h1 class="skills__header">Основной стек:</h1>
+                <h1 class="skills__header" id="myStack">Основной стек:</h1>
                 <div class="container__slide">
                     <div class="button__containerFB">
                     <button class="button-prev"></button>
@@ -134,7 +144,7 @@
 
            </section>
             <section class="hero-section-footer-grid"> <!--7 grid-->
-                <h1>Place for footer</h1>
+                <h1 id="contacts">Place for footer</h1>
                 <div class="modal">
                     <div class="modal__container">
                         <div class="modal__content">
@@ -143,9 +153,11 @@
                                 <div class="modal__title">Информационная карта сайта</div>
                                 <div class="total__modal">
                                 <div class="modal__inner modal__inner_textblock">
-                                    <span class=" modal__description"> Данная страница содержит в себе 5 основных блоков. Информация о моей дейятельности,
-                                        мои работы (портофолио). Также автор попытался  креативно продемострировать навыки работы с объектом Data,
-                                        реализовал небольшой слайдер со  стэком основ, которые изучались самотсоятельно с 11.2020года. </span>
+                                    <span class=" modal__description"> Данная страница содержит в себе 5 основных блоков. Информация обо мне и моей деятельности,
+                                        мои работы (портфолио). Также автор попытался креативно продемонстрировать навыки работы с объектом Data.
+                                        Стeк (основы) технологий, которые изучались самостоятельно с 11.2020г., реализованы в слайдере (см. Раздел Основной стек).
+                                        Завершающий блок - "Контакты", расположенный в нижнем левом углу сайта.
+                                    </span>
                                 </div>
                                 <div class="modal__inner modal__inner_image">
                                 </div>

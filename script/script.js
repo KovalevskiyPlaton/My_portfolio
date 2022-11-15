@@ -142,7 +142,7 @@ const modalTimerId = setTimeout(openModal,100);
 
 //Установка Light scroll  (мягкая прокрутка)
 const anchors = document.querySelectorAll('.nav__items > a');
-console.log(anchors)
+
 
 anchors.forEach(anchor=>{
     anchor.addEventListener('click', (event)=>{

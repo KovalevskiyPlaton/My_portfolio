@@ -9,6 +9,7 @@
     font-weight: normal;
     font-style: normal;
     font-size: 25px;
+    background-color: #d2b795;
 }
 
 .nav__items > a {
@@ -36,10 +37,9 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
 /*1 grid - first*/
 .hero-section-head-panel-grid{
     padding:10px;
-    border: 1px solid black;
     grid-area:hero-section-head-panel-grid;
 }
-.nav__panel{
+.nav__panel, .footer__panel{
     width: 100%;
     height:70px;
     display: flex;
@@ -49,21 +49,20 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     background: url('/images/nav/nav_panel.png');
     border-radius: 10px;
 }
-.nav__items{
+.nav__items {
     padding:20px 20px 0px 0px;
     margin-left:20px;
 }
 
+
 /*2 grid*/
 .hero-section-aboutMe-grid{
     padding:10px;
-    border: 1px solid black;
     grid-area:hero-section-aboutMe-grid;
 }
 /*3 grid*/
 .hero-section-myPhoto-grid{
     padding:10px;
-    border: 1px solid black;
     grid-area:hero-section-myPhoto-grid;
 }
 
@@ -78,7 +77,6 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
 
 /*4 grid*/
 .hero-section-projects-grid{
-    border: 1px solid black;
     grid-area:hero-section-projects-grid;
     width: 100%;
     height: 100%;
@@ -164,9 +162,7 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
 /*5 grid*/
 .hero-section-timer-grid{
     padding:10px;
-    border: 1px solid black;
     grid-area: hero-section-timer-grid;
-    /*grid-template-columns: auto;*/
     max-height: 403px;
     max-width: 489px;
 }
@@ -181,8 +177,7 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     width: 100%;
     display:flex;
     flex-direction:row;
-    /*justify-content:space-between;*/
-    align-content:center;
+    align-content:flex-start;
     align-items:start;
     text-align:center;
     flex-wrap:wrap;
@@ -217,7 +212,6 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
 .hero-section-skills-grid {
     padding: 0px;
     margin:0;
-    border: 1px solid black;
     grid-area: hero-section-skills-grid;
     width:100%;
     height:440px;
@@ -327,8 +321,28 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
 /*7 grid - finally*/
 .hero-section-footer-grid{
     padding:10px;
-    border: 1px solid black;
     grid-area:hero-section-footer-grid;
+}
+.footer__panel{
+    display: flex;
+}
+.footer__items{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding:20px;
+
+}
+.footer__items > a {
+    border: none;
+}
+.footer__items>a>img{
+    display: flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid orange;
+    cursor: pointer;
 }
 
 
@@ -362,7 +376,6 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     background-color:#fff;
     border:1px solid rgba(0,0,0,.2);
     border-radius:4px;
-
 
 }
 .modal__close{
@@ -496,19 +509,33 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
 
 @media(max-width: 440px){
     .hero-section-aboutMe-grid{
-        max-width:250px;
+        max-width:350px;
     }
     .hero-section-timer-grid{
         max-width: 250px;
         max-height: 100%;
     }
     .timer__container{
-        height: 60vh;
+        height: 90vh;
     }
     .hero-section-skills-grid{
         margin-top: -60px;
         margin-left: -110px;
         transform:scale(.6, .6);
     }
+    .hero-section-footer-grid{
+        margin-top: -80px;
+    }
+    .footer__panel{
+        justify-content: flex-start;
+        margin-left: 10px;
+        max-width: 305px;
+    }
 }
 
+/*1)Откорректироваь высоту слайдера и футера при max-width: 440px
+  2) Футер-регулеровка флекс-старт
+  3)Добавить инфу watsapp
+  4) Откорректировть ссылку на контакты
+  5) Переделать модальное окно
+*/

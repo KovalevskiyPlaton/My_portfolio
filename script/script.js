@@ -102,32 +102,33 @@ countTime();
 
 //Modal
 
-const modalTrigger = document.querySelectorAll('[data-modal]'),
+const modalTrigger = document.querySelector('[data-modal]'),
     modal = document.querySelector('.modal'),
-    modalCloseBtn = document.querySelector('[data-close]');
+    modalCloseBtn = document.querySelector('[data-close]'),
+    outSideModal = document.querySelector('.dm-cell');
+
 
 
 function openModal(){
     modal.classList.add('show');
     modal.classList.remove('hide');
-    document.body.style.overflow = 'hidden';
+    //document.body.style.overflow = 'hidden';
     clearInterval(modalTimerId);
+
 }
 
-modalTrigger.forEach(btn => {
-    btn.addEventListener('click', openModal);
-});
+modalTrigger.addEventListener('click', openModal);
 
 function closeModal(){
     modal.classList.add('hide');
     modal.classList.remove('show');
-    document.body.style.overflow = '';
+    //document.body.style.overflow = '';
 }
 
 modalCloseBtn.addEventListener('click', closeModal);
 
 modal.addEventListener('click', (e) =>{
-    if(e.target===modal){
+    if(e.target===modal||e.target==outSideModal){
         closeModal();
     }
 

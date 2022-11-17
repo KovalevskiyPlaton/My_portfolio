@@ -49,6 +49,13 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     background: url('/images/nav/nav_panel.png');
     border-radius: 10px;
 }
+.nav__panel > .open__modal{
+    display: flex;
+    /*justify-self: flex-start;*/
+    /*display: flex;*/
+    /*align-self: flex-start;*/
+    align-self: center;
+}
 .nav__items {
     padding:20px 20px 0px 0px;
     margin-left:20px;
@@ -348,78 +355,67 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
 
 /*settings modal*/
 
-.modal{
-    position:fixed;
-    top:0;
-    left:0;
-    z-index:1050;
-    display:none;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    background-color:rgba(0,0,0,.5)
-}
-.modal__container{
-    max-width:500px;
-    max-height:600px;
-    margin-top:10%;
-    margin-left:15%;
+.dm-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: none;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
 }
 
-.modal__content{
-    display: flex;
-    flex-direction: row;
-    position:relative;
-    width:650px;
-    height:550px;
-    padding:40px;
-    background-color:#fff;
-    border:1px solid rgba(0,0,0,.2);
-    border-radius:4px;
+
+.dm-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+/* ячейка блочной таблицы */
+.dm-cell {
+    display: table-cell;
+    /*padding: 0 1em;*/
+    vertical-align: middle;
+    text-align: center;
+}
+/* модальный блок */
+.dm-modal {
+    display: inline-block;
+    padding: 20px;
+    /* максимально возможная ширина */
+    max-width: 357px;
+    background: #a15d3d;
+    color: #cfd8dc;
+    text-align: left;
 
 }
 .modal__close{
-    position:absolute;
-    top:8px;right:14px;font-size:30px;
-    color:#000;opacity:.5;
+    position:relative;
+    max-width: 20px;
+    max-height: 20px;
+    margin-left:95%;
+    font-size:30px;
+    color:#000;
+    opacity:.5;
     font-weight:700;
     border:none;
     background-color:transparent;
     cursor:pointer
 }
-.modal__title{
-    text-align:center;
-    font-size:22px;
-    text-transform:uppercase;
-}
-.total__modal{
-    margin: 10px;
-    display: flex;
-    flex-direction: row;
-}
-.modal__inner_textblock{
-    display:flex;
-    max-width:240px;
-    max-height:200px;
-    border:none;
-    font-size:20px;
-    font-style: italic;
-    /*text-align:center;*/
-    text-align: start;
-    font-weight: bold;
 
-}
-.modal__inner_image{
-    display:flex;
-    width:240px;
-    height:410px;
-    background-image:url(/images/modal/img_modal.png);
-    font-size:18px;
-    text-align:center;
-    padding:0 20px;
-    border-radius: 10%;
-    margin-left: 80px;
-    border: 3px solid #ffd4b0
+.open__modal{
+    margin-top: 20px;
+    background-color: #ffdac0;
+    border: none;
+    font-family: 'Marck Script';
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    max-width:273px;
+    min-height: 40px;
+    cursor: pointer;
 }
 
 .show{
@@ -538,4 +534,5 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
   3)Добавить инфу watsapp
   4) Откорректировть ссылку на контакты
   5) Переделать модальное окно
+  6) Добавить фотогрфию и описание на карту аренды машин
 */

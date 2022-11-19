@@ -1,5 +1,5 @@
-/*font*/
-@font-face {
+
+@font-face { /*font*/
     font-family: 'Marck Script';
     src: url('/fonts/Marck_Script/MarckScript-Regular.ttf')
 }
@@ -17,7 +17,7 @@
     color: #ffdac0;
   }
 
-a:hover{
+.nav__items > a:hover{
     cursor: default;
     border-bottom: 1px solid #2a2727;
 }
@@ -49,11 +49,11 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     background: url('/images/nav/nav_panel.png');
     border-radius: 10px;
 }
+.footer__panel{
+    margin-top: 30px;
+}
 .nav__panel > .open__modal{
     display: flex;
-    /*justify-self: flex-start;*/
-    /*display: flex;*/
-    /*align-self: flex-start;*/
     align-self: center;
 }
 .nav__items {
@@ -67,6 +67,10 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     padding:10px;
     grid-area:hero-section-aboutMe-grid;
 }
+.hero-section-aboutMe-grid > a:hover{
+    cursor: none;
+}
+
 /*3 grid*/
 .hero-section-myPhoto-grid{
     padding:10px;
@@ -161,8 +165,14 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
        color: #ffdac0;
 
 }
+.itemFb__4, .itemFb__3, .itemFb__2, .itemFb__1 {
+    color: #af2424;
+    font-weight: bold;
+
+}
 
 .flex__box> a{
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -171,7 +181,7 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     padding:10px;
     grid-area: hero-section-timer-grid;
     max-height: 403px;
-    max-width: 489px;
+    max-width: 100%;
 }
 .timer__header{
     display: flex;
@@ -225,14 +235,6 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
 
 }
 
-/*container__slide{*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    padding: 150px 20px;*/
-/*    width: 480px;*/
-/*    height: 374px;*/
-/*    align-self:center;*/
-/*}*/
 
 .slider-wrapper, .dot{
     display: inline-block;
@@ -283,7 +285,7 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     height:40px;
     margin-right: 40px;
     margin-top: -30px;
-    /*margin-left: 20px;*/
+
 
 }
 .button-prev{
@@ -293,7 +295,6 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     background:url('/images/slider/Next_arrow.png');
 
 }
-
 
 .dot:hover{ background: #000000;}
 .dot:active{ background: #808080;}
@@ -321,7 +322,9 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     margin-bottom: 10px;
   }
 
-.active {background: #000000 }
+.active {
+    background: #000000
+}
 
 
 
@@ -340,9 +343,7 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     padding:20px;
 
 }
-.footer__items > a {
-    border: none;
-}
+
 .footer__items>a>img{
     display: flex;
     width: 60px;
@@ -448,6 +449,9 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
         max-height: 566px;
         background: url('/images/general_photo/GP-1-size.png');
     }
+    .footer__panel{
+        margin-top: -100px;
+    }
 
 }
 @media(max-width: 821px){
@@ -509,7 +513,7 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     }
     .hero-section-timer-grid{
         max-width: 250px;
-        max-height: 100%;
+        max-height: 55vh;
     }
     .timer__container{
         height: 90vh;
@@ -519,20 +523,18 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
         margin-left: -110px;
         transform:scale(.6, .6);
     }
+    .hero-section-skills-grid > .sub__menu{
+        transform:scale(1.6, 1.6);
+        margin-left: 120px;
+    }
     .hero-section-footer-grid{
-        margin-top: -80px;
+
     }
     .footer__panel{
         justify-content: flex-start;
         margin-left: 10px;
         max-width: 305px;
-    }
+        margin-top: -120px;
+        }
 }
 
-/*1)Откорректироваь высоту слайдера и футера при max-width: 440px
-  2) Футер-регулеровка флекс-старт
-  3)Добавить инфу watsapp
-  4) Откорректировть ссылку на контакты
-  5) Переделать модальное окно
-  6) Добавить фотогрфию и описание на карту аренды машин
-*/

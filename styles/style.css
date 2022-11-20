@@ -1,7 +1,7 @@
 
 @font-face { /*font*/
     font-family: 'Marck Script';
-    src: url('fonts/Marck_Script/MarckScript-Regular.ttf')
+    src: url('../fonts/Marck_Script/MarckScript-Regular.ttf')
 }
 
 :root{
@@ -46,7 +46,7 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    background: url('images/nav/nav_panel.png');
+    background: url('../images/nav/nav_panel.png');
     border-radius: 10px;
 }
 .footer__panel{
@@ -271,11 +271,11 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
 }
 .button-prev{
 
-    background:url('images/slider/Prev_arrow.png');
+    background:url('../images/slider/Prev_arrow.png');
 }
 .button-next{
 
-    background:url('images/slider/Next_arrow.png');
+    background:url('../images/slider/Next_arrow.png');
 }
 
 .button-next, .button-prev{
@@ -288,13 +288,7 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
 
 
 }
-.button-prev{
-    background:url('images/slider/Prev_arrow.png');
-}
-.button-next{
-    background:url('images/slider/Next_arrow.png');
 
-}
 
 .dot:hover{ background: #000000;}
 .dot:active{ background: #808080;}
@@ -447,7 +441,7 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     .Photo__author{
         max-width: 425px;
         max-height: 566px;
-        background: url('images/general_photo/GP-1-size.png');
+        background: url('../images/general_photo/GP-1-size.png');
     }
     .footer__panel{
         margin-top: -100px;
@@ -458,7 +452,7 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     .Photo__author{
         max-width: 318px;
         max-height: 425px;
-        background: url('images/general_photo/GP-2-size.png');
+        background: url('../images/general_photo/GP-2-size.png');
     }
 
 }
@@ -478,7 +472,7 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     .Photo__author{
         max-width: 239px;
         max-height: 319px;
-        background: url('images/general_photo/GP-3-size.png');
+        background: url('../images/general_photo/GP-3-size.png');
     }
     .nav__panel{
         max-width: 510px;
@@ -492,7 +486,7 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     .Photo__author{
         max-width: 239px;
         max-height: 319px;
-        background: url('images/general_photo/GP-3-size.png');
+        background: url('../images/general_photo/GP-3-size.png');
     }
     .hero-section-aboutMe-grid{
         max-width:400px;

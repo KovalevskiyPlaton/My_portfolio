@@ -448,7 +448,7 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
         margin-top: -100px;
     }
     .hero-section-timer-grid{
-                margin-bottom: -5%;
+                margin-bottom: -10%;
     }
 
 }
@@ -460,7 +460,11 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     }
 
 }
-
+@media(max-width: 629px){
+    .hero-section-timer-grid{
+        margin-bottom: 5%;
+    }
+}
 @media(max-width: 560px){
     .container {
         grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid'

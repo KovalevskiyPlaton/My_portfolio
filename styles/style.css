@@ -80,7 +80,7 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
 .Photo__author{
     width: 566px;
     height: 755px;
-    background: url('images/general_photo/GP.png');
+    background: url('../images/general_photo/GP.png');
     border-radius:10%;
 }
 
@@ -205,7 +205,7 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     display:flex;
     width: 120px;
     height: 80px;
-    background: url('images/timer/timer_border.png.png');
+    background: url('../images/timer/timer_border.png');
     justify-content:center;
     align-content:center;
     align-items:center;

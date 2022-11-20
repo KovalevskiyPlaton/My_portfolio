@@ -182,6 +182,7 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     grid-area: hero-section-timer-grid;
     max-height: 403px;
     max-width: 100%;
+    margin-bottom: 20px;
 }
 .timer__header{
     display: flex;
@@ -253,7 +254,7 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
 }
 
 .slider-line{
-     display: flex;
+    display: flex;
     position: relative;
     left:0;
     transition: 1s;
@@ -446,6 +447,9 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     .footer__panel{
         margin-top: -100px;
     }
+    .hero-section-timer-grid{
+                margin-bottom: -5%;
+    }
 
 }
 @media(max-width: 821px){
@@ -507,28 +511,30 @@ grid-template-areas:  'hero-section-head-panel-grid hero-section-head-panel-grid
     }
     .hero-section-timer-grid{
         max-width: 250px;
-        max-height: 55vh;
+        max-height: 100%;
+
     }
     .timer__container{
-        height: 90vh;
+        height: 100%;
     }
     .hero-section-skills-grid{
-        margin-top: -60px;
         margin-left: -110px;
         transform:scale(.6, .6);
+
     }
     .hero-section-skills-grid > .sub__menu{
         transform:scale(1.6, 1.6);
         margin-left: 120px;
     }
-    .hero-section-footer-grid{
 
-    }
     .footer__panel{
         justify-content: flex-start;
         margin-left: 10px;
         max-width: 305px;
         margin-top: -120px;
         }
+    .hero-section-timer-grid{
+        margin-bottom: -15%;
+    }
 }
 
